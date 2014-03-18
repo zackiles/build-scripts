@@ -86,9 +86,9 @@ tar xvf $build_scripts_outfile 2>> /dev/null 1>> /dev/null
 rm $build_scripts_outfile
 
 if [[ -z "$1" ]]; then
-    callback_script=Arachni-build-scripts-*/build.sh
+    callback_script=zackiles-build-scripts-*/build.sh
 else
-    callback_script=Arachni-build-scripts-*/$1.sh
+    callback_script=zackiles-build-scripts-*/$1.sh
 fi
 
 ls $callback_script 2>> /dev/null 1>> /dev/null
