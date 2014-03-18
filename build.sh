@@ -371,9 +371,15 @@ install_from_src() {
     handle_failure $1
 
     echo "  * Installing"
-    make install 2>> $logs_path/$1 1>> $logs_path/$1
-    handle_failure $1
+    #If OpenSSL install without man. Fixes perl/podman errors on man generation.
+    if [[ $1 = "openssl" ]]; then
+        make install_sw 2>> $logs_path/$1 1>> $logs_path/$1
+        handle_failure $1
+    else
+        make install 2>> $logs_path/$1 1>> $logs_path/$1
+    fi
 
+    handle_failure $1
     cd - > /dev/null
 }
 
