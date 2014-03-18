@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-build_script_tarball="https://github.com/Arachni/build-scripts/tarball/master"
+build_script_tarball="https://github.com/zackiles/build-scripts/tarball/master"
 
 if [ -z "$ARACHNI_BUILD_DIR" ]; then
     build_dir="arachni-build-dir"
